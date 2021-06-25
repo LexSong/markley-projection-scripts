@@ -1,1 +1,4 @@
 /data
+
+# Node modules
+node_modules/
