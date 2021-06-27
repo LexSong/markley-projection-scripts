@@ -1,0 +1,9 @@
+---
+channels:
+  - defaults
+dependencies:
+  - netcdf4
+  - rioxarray
+  - shapely
+  - tqdm
+  - xarray
