@@ -1,4 +1,5 @@
 import { geoTetrahedralLee } from "d3-geo-polygon";
+import { mean } from "d3";
 
 // Singularities are at latitudes 35.26439
 const latitude = (Math.acos(1 / 3) / 2 / Math.PI) * 180;
@@ -34,5 +35,16 @@ export function invert(x, y) {
     }
   }
 
-  return tetrahedralMarkley.invert([x, y]);
+  const coord = tetrahedralMarkley.invert([x, y]);
+  if (coord !== undefined) return coord;
+
+  const delta = 1e-7;
+  const points = [
+    [x - delta, y],
+    [x + delta, y],
+    [x, y - delta],
+    [x, y + delta],
+  ].map(tetrahedralMarkley.invert);
+
+  return [mean(points, (x) => x[0]), mean(points, (x) => x[1])];
 }
