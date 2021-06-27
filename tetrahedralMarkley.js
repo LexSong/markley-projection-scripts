@@ -16,5 +16,23 @@ const tetrahedralMarkley = geoTetrahedralLee()
   });
 
 export function invert(x, y) {
+  if (y === 0) {
+    if (x === 0) return [-90, latitude];
+    if (x === 1) return [0, 90];
+    if (x === 2) return [90, latitude];
+  }
+
+  if (y === Math.sqrt(3)) {
+    if (x < 1) {
+      return [0, tetrahedralMarkley.invert([x, y])[1]];
+    }
+    if (x === 1) {
+      return [0, -latitude];
+    }
+    if (x > 1) {
+      return [0, tetrahedralMarkley.invert([2 - x, y])[1]];
+    }
+  }
+
   return tetrahedralMarkley.invert([x, y]);
 }
