@@ -14,3 +14,7 @@ const tetrahedralMarkley = geoTetrahedralLee()
       [90, 0],
     ],
   });
+
+export function invert(x, y) {
+  return tetrahedralMarkley.invert([x, y]);
+}
