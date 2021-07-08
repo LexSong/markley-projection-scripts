@@ -10,9 +10,8 @@ See https://observablehq.com/@fil/markley for more infomation about Markley’s 
 
 `grid.js` inverts grid points to latitudes and longitudes and write to `grid.jsonl`.
 
-### Generating heightmap
+### Generating heightmaps
 
-`generate_map.py` loads `grid.jsonl` and calculates heightmap from [GEBCO_2021](https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2021/) data.
-This takes a few hours to finish.
+`generate_map.py` loads `grid.jsonl` and calculates the heightmap of a hemisphere from [GEBCO_2021](https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2021/) data.
 
-Generated heightmaps are saved as `heightmap_east.npy` and `heightmap_west.npy`.
+This takes a few hours to finish. Generated heightmaps are saved as `heightmap_east.npy` and `heightmap_west.npy`.
