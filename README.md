@@ -2,7 +2,7 @@
 
 ![Elevation map](images/elevation.png)
 
-Here are some scripts to generate low-resolution, tileable map images with F. Landis Markley’s projection (1982).
+Here are some scripts to generate low-resolution, tileable map images with Dr. F. Landis Markley’s projection (1982).
 
 See https://observablehq.com/@fil/markley for more infomation about Markley’s projection.
 
