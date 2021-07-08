@@ -6,11 +6,11 @@ Here are some scripts to generate low-resolution, tileable map images with F. La
 
 See https://observablehq.com/@fil/markley for more infomation about Markley’s projection.
 
-### Inverse projection of Markley's
+### Inverting Markley's projection
 
 `grid.js` inverts grid points to latitudes and longitudes and write to `grid.jsonl`.
 
-### Generate heightmap
+### Generating heightmap
 
 `generate_map.py` loads `grid.jsonl` and calculates heightmap from [GEBCO_2021](https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2021/) data.
 This takes a few hours to finish.
